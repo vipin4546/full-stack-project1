@@ -20,13 +20,14 @@ function App() {
           selectedAnswer = {quiz.selectedAnswer}
           onSelect = {quiz.selectAnswer}
           onNext={quiz.nextQuestion}
+          timer = {quiz.timer}
           />
         )
       }
       {
         quiz.screen === "result" && (
           <ResultScreen score={quiz.score}
-          totalQuestions = {quiz.totalQuestion}
+          totalQuestions = {quiz.totalQuestions}
           onRestart = {quiz.restartQuiz}/>
         )
       }
